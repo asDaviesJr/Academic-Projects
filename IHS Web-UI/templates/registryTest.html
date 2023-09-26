@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel= "stylesheet" type= "text/css" href= "{{url_for('static', filename='/registry_style.css')}}">
+    <script type="text/javascript" src="../static/script.js"></script>
+    <title>Registy</title>
+</head>
+
+<body>
+
+    <header>
+        <section><img src="../logos/IHSLogo2.png" alt="IHSLogo2" width="500px" height="100px"></section>
+    </header>
+
+    <section class="table">
+            {% for repo in data%}
+            <table class="hover-box" >
+
+                    <tr>
+                        <td rowspan="2" class="logo">
+                            <div>
+                                <img src="../logos/{{repo.repo_logo}}" alt="{{repo.repo_logo}}">
+                            </div>
+                        </td>
+
+                        <td class="nameUpdated">
+                            <div>
+                                <div><b>{{repo.display_name}}({{repo.repo_name}})</b></div>
+                                <div><i>{{repo.updated}}</i></div>
+                            </div>
+                        </td>
+
+                        <td class="sticker">
+                            <div>
+                                <img src="../stickers/{{repo.compliant_status}}" alt="{{repo.compliant_status}}" class="sticker">
+                            </div>
+                        </td>
+
+                        <td class="tags">
+                                <div>{{repo.num_of_tags}}</div>
+                                <div><b>Tags</b></div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="3">
+                            <div class="description">{{repo.description}}</div>
+                            <div class="repoNotes"><i>{{repo.notes}}</i></div>
+                        </td>
+                    </tr>
+
+            </table>
+            {% endfor % }
+    </section>
+
+    <footer></footer>
+
+
+</body>
+</html>

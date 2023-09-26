@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel= "stylesheet" type= "text/css" href= "{{url_for('static', filename='/repo_style.css')}}">
+    <script src="{{url_for('static', filename = '/script.js'}}"></script>
+    <meta charset="UTF-8">
+    <title>{{data.repo_name}}</title>
+</head>
+<body>
+    <header>
+        <section><img src="{{url_for('static', filename = '/IHSLogo2.png' )}}" alt="IHSLogo2" width="500px" height="100px"></section>
+    </header>
+    <section >
+        <table class="repoDetails">
+                    <tr>
+                        <td rowspan="2" class="logo">
+                            <div>
+                                <img src="{{url_for('static', filename = repo.repo_logo )}}" alt="{{repo.repo_logo}}">
+                            </div>
+                        </td>
+
+                        <td class="nameUpdated">
+                            <div>
+                                <div><b>{{repo.display_name}} ({{repo.repo_name}})</b></div>
+                                <div><i>{{repo.updated}}</i></div>
+                            </div>
+                        </td>
+
+                        <td class="sticker">
+                            <div>
+                                <img src="{{url_for('static', filename = repo.compliant_status )}}" alt="{{repo.compliant_status}}" class="sticker">
+                            </div>
+                        </td>
+
+                        <td class="tags">
+                                <div>{{repo.num_of_tags}}</div>
+                                <div><b>Tags</b></div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="3">
+                            <div class="description">{{repo.description}}</div>
+                            <div class="repoNotes"><i>{{repo.notes}}</i></div>
+                        </td>
+                    </tr>
+        </table>
+    </section>
+    <section >
+        {% for id in data.repo_tags %}
+        <table class="tagDetails">
+
+
+            <tr>
+                <td rowspan="3" class="sitelogo">
+                    <div><img src="{{url_for('static', filename = '/IHSLogo3.png' )}}" alt="IHSLogo3"></div>
+                </td>
+                <th>Tag</th>
+                <th>Image ID</th>
+                <th>OS/Arch</th>
+                <th>Size</th>
+                <th></th>
+
+            </tr>
+
+            <tr>
+                <td>
+                    <div style="float:left">{{data.repo_tags[id].tag}}</div>
+                    <div style="float:center"> <img src="{{url_for('static', filename = data.repo_tags[id].compliance_status )}}" alt="{{data.repo_tags[id].compliance_status}}"></div>
+                    <div style="clear:both; float:left">{{data.repo_tags[id].updated}}</div>
+
+                </td>
+                <td><div>{{data.repo_tags[id].short_id}}</div></td>
+                <td><div>{{data.repo_tags[id].os}}/{{data.repo_tags[id].architecture}}</div></td>
+                <td><div>{{data.repo_tags[id].size}}</div></td>
+                <td><div>docker pull {{data.repo_name}}:{{data.repo_tags[id].tag}}</div></td>
+            </tr>
+
+            <tr>
+                <td colspan="5"><div class="button"><button onclick="showDetails('{{data.repo_tags[id].short_id}}header', '{{data.repo_tags[id].short_id}}content', '{{data.repo_tags[id].short_id}}pn')">IHS Details</button></div></td>
+            </tr>
+            <section>
+                <tr id="{{data.repo_tags[id].short_id}}header" hidden>
+                        <td rowspan="3" class="sitelogo"></td>
+                        <th>Processed Date</th>
+                        <th>Times Processed</th>
+                        <th>Initial Compliance</th>
+                        <th>Final Compliance</th>
+                        <td rowspan="3"><button>View Reports</button></td>
+                </tr>
+
+                <tr id="{{data.repo_tags[id].short_id}}content" hidden>
+                        <td><div>{{data.repo_tags[id].processed_date}}</div></td>
+                        <td><div>{{data.repo_tags[id].times_processed}}</div></td>
+                        <td><div>{{data.repo_tags[id].original_compliance}}</div></td>
+                        <td><div>{{data.repo_tags[id].original_compliance}}</div></td>
+                </tr>
+
+                <tr id="{{data.repo_tags[id].short_id}}pn" hidden>
+                        <td colspan="4"><div>{{data.repo_tags[id].processed_notes}}</div></td>
+                </tr>
+            </section>
+
+
+        </table>
+        {% endfor %}
+    </section>
+    <footer>Footer</footer>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel= "stylesheet" type= "text/css" href= "{{url_for('static', filename='/login_style.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Login</title>
+</head>
+<body class="center">
+    <header></header>
+    
+    <section class="center">
+        <img src="../logos/IHSLogo1.png" alt="IHSLogo">
+        <h2>Please login to continue</h2>
+        <section>
+            <form method="POST" >
+                <div>
+                    <i class="fa fa-user " aria-hidden="true" ></i>
+                    <input type="text" name="username" placeholder="Enter Username">
+                </div>
+                <div>
+                    <i class="fa fa-lock " aria-hidden="true"></i>
+                    <input type="password" name="password" placeholder="Enter Password">
+                </div>
+                <button type="submit"><b>Login</b></button>
+            </form>
+
+        </section>
+
+    </section>
+    
+    <footer></footer>
+
+
+</body>
+</html>

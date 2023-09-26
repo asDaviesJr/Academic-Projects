@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel= "stylesheet" type= "text/css" href= "{{url_for('static', filename='/registry_style.css')}}">
+    <title>Registy</title>
+</head>
+
+<body>
+
+    <header>
+        <section><a href="/registry" style="cursor:pointer; text-decoration: none;"><img src="{{url_for('static', filename = '/IHSLogo2.png' )}}" alt="IHSLogo2" width="500px" height="100px"></a></section>
+    </header>
+
+    <section class="table">
+            {% for repo in data%}
+        <div>
+            <a href="/repo/{{repo.repo_name}}" style="cursor:pointer; text-decoration: none;">
+            <table class="hover-box" >
+
+                    <tr>
+                        <td rowspan="2" class="logo">
+                            <div>
+                                <img src="{{url_for('static', filename = repo.repo_logo )}}" alt="{{repo.repo_logo}}">
+                            </div>
+                        </td>
+
+                        <td class="nameUpdated">
+                            <div>
+                                <div><b>{{repo.display_name}} ({{repo.repo_name}})</b></div>
+                                <div><i>{{repo.updated}}</i></div>
+                            </div>
+                        </td>
+
+                        <td class="sticker">
+                            <div>
+                                <img src="{{url_for('static', filename = repo.compliant_status )}}" alt="{{repo.compliant_status}}" class="sticker">
+                            </div>
+                        </td>
+
+                        <td class="tags">
+                                <div>{{repo.num_of_tags}}</div>
+                                <div><b>Tags</b></div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="3">
+                            <div class="description">{{repo.description}}</div>
+                            <div class="repoNotes" style="color:#3AAFA9"><i>{{repo.notes}}</i></div>
+                        </td>
+                    </tr>
+
+            </table>
+            </a>
+        </div>
+            {% endfor %}
+    </section>
+
+    <footer></footer>
+
+
+</body>
+</html>

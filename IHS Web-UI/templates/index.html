@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RIMSCache</title>
+
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+        </ul>
+    </nav>
+    <h1>RIMS Cache</h1>
+</header>
+<section>
+    <div id="image-border">
+            {% for image in data %}
+                {% for img_id in image %}
+                <div>
+                    <h3 id="together">{{image[img_id].img_name}}</h3>
+                    <h4>Created on: {{image[img_id].created_date}} </h4>
+                    <h4>Last Tag Date: {{image[img_id].last_tag_time}} </h4>
+                    </div>
+                    <table>
+                        <thead>
+                            <th>Tag</th>
+                            <th>Image ID</th>
+                            <th>Description</th>
+                            <th>Image OS</th>
+                            <th>Size</th>
+                        </thead>
+                        <tbody >
+                                <tr>
+                                    <td><a href="index.html">{{image[img_id].tag}}</a></td>
+                                    <td>{{img_id}}</td>
+                                    <td>{{image[img_id].description}}</td>
+                                    <td>{{image[img_id].img_os}}</td>
+                                    <td>{{image[img_id].size}}</td>
+                                    <td><button >SCAN</button></td>
+
+                                </tr>
+                        </tbody>
+                    </table>
+                <div id="space"></div>
+                </div>
+            {% endfor %}
+            {% endfor %}
+        </div>
+</section>
+<footer></footer>
+
+
+</body>
+</html>
