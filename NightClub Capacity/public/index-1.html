@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Web Assignment 1</title>
+  <meta name="description" content="Client1: Inital UI">
+  <meta name="author" content="Addo Davies Jr.">
+  <link rel = "stylesheet" href = style.css>
+  <script src="script.js"></script>
+</head>
+<body>
+    <h1 style = "text-align: center; font-family: 'Segoe UI'; font-size:300%">Nightclub Capacity</h1>
+    <h3 style = "text-align: center; font-family: 'Segoe UI';">Each time someone enters/ leaves the club, select the correct club and click the appropriate button</h3>
+    <div class = "row">
+        <div class = "gap"></div>
+        <div id = "arcaneColor" class="column" style="background-color: greenyellow; border-radius: 15%;">
+            <h2 style= "text-align: center">Club Arcane</h2>
+            <h3 id = "arcaneMsg" style= "text-align: center"></h3>
+        </div>
+        <div class = "gap"></div>
+        <div id= "undergroundColor" class="column" style="background-color: greenyellow; border-radius: 15%;">
+            <h2 style= "text-align: center">Club Underground</h2>
+            <h3 id= "undergroundMsg" style= "text-align: center"></h3>
+        </div>
+        <div class = "gap"></div>
+        <div id= "sodaColor" class="column" style="background-color: greenyellow; border-radius: 15%;">
+            <h2 style= "text-align: center">Club Soda</h2>
+            <h3 id = "sodaMsg" style= "text-align: center"></h3>
+        </div>
+        <div class = "gap"></div>
+        <div id = "studioColor" class="column" style="background-color: greenyellow; border-radius: 15%;">
+            <h2 style= "text-align: center">Studio 52</h2>
+            <h3 id ="studioMsg" style= "text-align: center"></h3>
+        </div>
+        <div class = "gap"></div>
+    </div>
+    <div class = "row">
+        <div class = "gap"></div>
+        <div class="column"><h2 id ="arcaneOcc"style = "text-align: center">0</h2></div>
+        <div class = "gap"></div>
+        <div class="column"><h2 id ="undergroundOcc" style = "text-align: center">0</h2></div> 
+        <div class = "gap"></div>
+        <div class="column"><h2 id ="sodaOcc" style = "text-align: center">0</h2></div> 
+        <div class = "gap"></div>
+        <div  class="column"><h2 id ="studioOcc" style = "text-align: center">0</h2></div>
+        <div class = "gap"></div>  
+    </div>
+    <div class = "footer">
+        <div id="clubs" class = "center">
+        <input type="radio" id="arcane" name="club">
+        <label for= "club1">Club Arcane</label><br>
+        <input type="radio" id="underground" name="club">
+        <label for= "club2">Club Underground</label><br>
+        <input type="radio" id="soda" name="club">
+        <label for= "club3">Club Soda</label><br>
+        <input type="radio" id="studio" name="club">
+        <label for= "club4">Studio 52</label>
+        <div>
+            <button type="button" onclick="add_occupancy()">+</button>
+            <button type="button" onclick="subtract_occupancy()">-</button>
+        </div>
+        </div>
+    </div>
+    
+    
+</body>
+</html>

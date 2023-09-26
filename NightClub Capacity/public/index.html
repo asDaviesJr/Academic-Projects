@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Web Assignment 0</title>
+  <meta name="description" content="First web assignment">
+  <meta name="author" content="Addo Davies">
+  <script>  
+    
+
+    function clubInfo(clubMenu) {
+        var name = document.getElementById("nameBox")
+        var location = document.getElementById("locationBox")
+        var music = document.getElementById("musicBox")
+        
+        if (clubMenu.value == 'clubArcane'){
+            name.innerHTML = "Name: Club Arcane"
+            name.style.backgroundColor = "gold"
+            name.style.color = "black"
+            location.innerHTML = "Location: Washington DC"
+            location.style.backgroundColor = "gold"
+            location.style.color = "black"
+            music.innerHTML = "Music: Hip-Hop/Rap"
+            music.style.backgroundColor = "gold"
+            music.style.color = "black"
+            
+            
+        } else if (clubMenu.value == 'clubUnderground'){
+            name.innerHTML = "Name: Club Underground"
+            name.style.backgroundColor = "black"
+            name.style.color = "purple"
+            location.innerHTML = "Location: New York City"
+            location.style.backgroundColor = "black"
+            location.style.color = "purple"
+            music.innerHTML = "Music: Drill/Rap "
+            music.style.backgroundColor = "black"
+            music.style.color = "purple"
+            
+        } else if (clubMenu.value == 'clubSoda'){
+            name.innerHTML = "Name: Club Soda"
+            name.style.backgroundColor = "orange"
+            name.style.color = "white"
+            location.innerHTML = "Location: Austin, TX"
+            location.style.backgroundColor = "orange"
+            location.style.color = "white"
+            music.innerHTML = "Music: Pop"
+            music.style.backgroundColor = "orange"
+            music.style.color = "white"
+
+            
+        } else if (clubMenu.value == 'studio52'){
+            name.innerHTML = "Name: Studio 52"
+            name.style.backgroundColor = "brown"
+            name.style.color = "black"
+            location.innerHTML = "Location: Tennessee"
+            location.style.backgroundColor = "brown"
+            location.style.color = "black"
+            music.innerHTML = "Music: Country"
+            music.style.backgroundColor = "brown"
+            music.style.color = "black"
+            
+        } else if (clubMenu.value == 'ciros'){
+            name.innerHTML = "Name: Ciro's 52"
+            name.style.backgroundColor = "green"
+            name.style.color = "yellow"
+            location.innerHTML = "Location: Jamaica"
+            location.style.backgroundColor = "green"
+            location.style.color = "yellow"
+            music.innerHTML = "Music: Reggae"
+            music.style.backgroundColor = "green"
+            music.style.color = "yellow"
+            
+        } else if (clubMenu.value == 'paradisioGarage'){
+            name.innerHTML = "Name: Studio 52"
+            name.style.backgroundColor = "red"
+            name.style.color = "blue"
+            location.innerHTML = "Location: Dominican Republic"
+            location.style.backgroundColor = "red"
+            location.style.color = "blue"
+            music.innerHTML = "Music: Bachata"
+            music.style.backgroundColor = "red"
+            music.style.color = "blue"
+        }
+        
+    }
+   </script>
+  
+</head>
+
+
+
+
+
+<body>
+    <h1 style = "text-align: center;font-family:Verdana; font-size:300% "><b>SWEN-344 Web Assignment 0</b></h1>
+        <h2 style = "text-align: center;font-family: Impact;">Section 03</h2>
+    <div style = "width:131px; margin:0 auto;">
+        <label for = "clubs">Choose a NightClub</label>
+        <select name = "ClubMenus" id= "clubs" onchange="clubInfo(this)">
+            <option value = "select">Select Option</option>
+            <option value = "clubArcane">Club Arcane</option>
+            <option value = "clubUnderground">Club Underground</option>
+            <option value = "clubSoda">Club Soda</option>
+            <option value = "studio52">Studio 52</option>
+            <option value = "ciros">Ciro's</option>
+            <option value = "paradisioGarage">Paradisio Garage</option>
+        </select>
+    </div>
+    <div id="nameBox" style = "width:200px;margin:0 auto;background-color: aliceblue;"></div>
+    <div id="locationBox" style = "width:200px;margin:0 auto;background-color: aliceblue;"></div>
+    <div id="musicBox" style = "width:200px;margin:0 auto;background-color: aliceblue;"></div>
+
+
+</body>
+</html>

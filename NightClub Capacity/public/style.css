@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box; 
+}
+
+/*Create Column*/
+.column {
+    float: left; 
+    width: 20%;
+    padding: 10px; 
+    height: 150px;  
+
+}
+
+.gap {
+    background-color: white;
+    float:left; 
+    width: 4%; 
+    padding: 10px; 
+    height: 150px;
+}
+
+/*Create Row */
+.row:after{
+    content: "";
+    display: table; 
+    clear: both;  
+}
+
+/*Center a Bottom Middle */
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#center {
+    width: 500px;
+    margin: 0 auto;
+}
+
+/*Vertically Align Radio Buttons*/
+input{
+    vertical-align:middle;
+}
+
+/*Center Div elements*/
+.center {
+    margin: auto; 
+    width: 15%; 
+    padding: 10px; 
+}
+
+/*adjust size of add and subtract submit buttons */
+
+button[type=button] {
+    width: 5em; 
+    height: 2em;  
+}
