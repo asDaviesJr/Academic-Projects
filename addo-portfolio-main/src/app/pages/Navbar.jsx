@@ -9,7 +9,7 @@ function Navbar() {
       <div className="container flex space-x-4"> 
         <div className='container flex-x-4'>
           <h3>Addo Davies Jr.</h3>
-          <p className='text-white'>Rochester, NY</p>
+          <p className='text-white'>Bowie, MD</p>
           <div className="flex space-x-4">
           <IconLink platform="github" url="https://github.com/asDaviesJr/Academic-Projects" label="GitHub" />
           <IconLink platform="linkedin" url="https://www.linkedin.com/in/addo-davies-jr/" label="LinkedIn"/>
