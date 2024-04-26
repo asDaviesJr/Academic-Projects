@@ -34,7 +34,7 @@ const HeroSection = () => {
         </div>
         <div className="text-lg text-gray-500">
           <p className="text-gray-400">
-            Searching for a Software Engineer proficient in vital scripting languages such as Python, Java, and C++, along with a diverse tech stack encompassing services like AWS, Docker, and Ansible? With a background in roles like Cloud Security Researcher, Software Security Researcher, and Research & Development Engineer, I'm keen to contribute my expertise to your organization. Eager to harness my skills to deliver impactful software solutions that advance society, let's join forces to shape the future of technology together!
+            Searching for a Software Engineer proficient in vital scripting languages such as Python, Java, and C++, along with a diverse tech stack encompassing services like AWS, Docker, and Ansible? With a background in roles like Cloud Security Researcher, Software Security Researcher, and Research &amp; Development Engineer, I'm keen to contribute my expertise to your organization. Eager to harness my skills to deliver impactful software solutions that advance society, let's join forces to shape the future of technology together!
           </p>
         </div>
         <SkillsSection />
@@ -55,5 +55,3 @@ const HeroSection = () => {
 }
 
 export default HeroSection;
-
-
