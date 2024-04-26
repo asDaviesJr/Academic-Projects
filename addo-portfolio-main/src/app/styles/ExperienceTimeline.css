@@ -1,0 +1,21 @@
+.vertical-timeline::before {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 4px;  
+    height: 100%;
+    background: #ffff; 
+    
+}
+  
+.vertical-timeline-element::before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px; 
+    height: 100%;
+    background: #ffff; 
+    margin-left: -1px; 
+}
+
+
