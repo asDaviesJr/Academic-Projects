@@ -1,4 +1,4 @@
-import { SiCss3, SiPython, SiPandas, SiAnsible, SiSelenium, SiHtml5, SiJavascript, SiReact, SiRedhat, SiOracle, SiPostgreSQL } from "react-icons/si";
+import { SiCss3, SiPython, SiPandas, SiAnsible, SiSelenium, SiHtml5, SiJavascript, SiReact, SiRedhat, SiOracle, SiPostgresql } from "react-icons/si";
 import { FaUserTie, FaNode, FaAws, FaLock, FaRegCalendar, FaDocker, FaRedhat, FaGlasses, FaBriefcase, FaGraduationCap } from "react-icons/fa";
 import { GrVulnerability } from "react-icons/gr";
 import { BsFiletypeXml } from "react-icons/bs";
