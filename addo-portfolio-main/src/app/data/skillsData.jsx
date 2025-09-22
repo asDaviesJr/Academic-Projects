@@ -1,4 +1,4 @@
-import { SiCss3, SiGit, SiPython, SiPandas, SiAnsible, SiSelenium, SiTerraform, SiHtml5, SiJavascript, SiReact, SiPostgresql, SiMysql, SiGnubash, SiCplusplus } from "react-icons/si";
+import { SiCss3, SiGit, SiPython, SiPandas, SiAnsible, SiSelenium, SiTerraform, SiHtml5, SiJavascript, SiReact, SiPostgresql, SiMysql, SiGnubash, SiCplusplus, SiOracle } from "react-icons/si";
 import { FaJava, FaNode, FaAws, FaDocker, FaRedhat} from "react-icons/fa";
 import { RiFileCloudFill } from "react-icons/ri";
 
@@ -25,6 +25,8 @@ const skillsData = [
     { id: 18, type: "frontend", name: "CSS", image: <SiCss3 /> },
     { id: 19, type: "backend", name: "Node.js", image: <FaNode /> },
     { id: 20, type: "frontend", name: "React", image: <SiReact /> },
+    { id: 21, type: "backend", name: "Oracle", image: <SiOracle /> },
+    
     
 ];
 
