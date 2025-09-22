@@ -49,7 +49,7 @@ const ContactSection = () => {
                 <IconLink platform="github" url="https://github.com/asd1520" label="GitHub" />
                 <IconLink platform="linkedin" url="https://www.linkedin.com/in/addo-davies-jr/" label="LinkedIn"/>
                 <IconLink platform = "email" url="mailto:addo.sdavies@gmail.com" label="Email"/>
-                <IconLink platform="resume" url="/Davies_Addo_SE_Resume.pdf" label="Resume"/>
+                <IconLink platform="resume" url="/Addo_Davies_Resume_2025.docx.pdf" label="Resume"/>
               </div>
               <p className="phone-location">Phone: 240-495-0707 | Location: Bowie, Maryland, USA</p>
               <p className="phone-location">Feel free to get in touch for any inquiries or collaboration opportunities.</p>
