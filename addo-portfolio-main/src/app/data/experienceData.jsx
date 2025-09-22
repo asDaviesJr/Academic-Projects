@@ -5,9 +5,44 @@ import { BsFiletypeXml } from "react-icons/bs";
 
 
 const experienceData = [
-  
+
   {
     id: 1,
+    type: "work",
+    company: "NumFOCUS",
+    date: 'September 2024 – Present',
+    img: '/numfocus.png',
+    title: 'Cloud DevOps Engineer',
+    location: 'Remote',
+    icon: <FaBriefcase />,
+    description: 'Design and develop software applications based on business needs while overseeing cloud infrastructure and security for open-source projects, providing strategic technical recommendations and support.',
+    skills: [
+      { id: 1, name: "Python", image: <SiPython /> },
+      { id: 2, name: "AWS", image: <FaAws /> },
+      { id: 5, name: "CloudFormation", image: <RiFileCloudFill /> },
+      { id: 7, name: "Docker", image: <FaDocker /> },
+    ],
+  },
+  {
+    id: 2,
+    type: "work",
+    company: "National Consortium for the Study of Terrorism and Responses to Terrorism (START)",
+    date: 'August 2024 – September 2025',
+    img: '/umd logo.png',
+    title: 'Open-Source Cloud Application Advisor',
+    location: 'Remote',
+    icon: <FaBriefcase />,
+    description: 'Software Developer tasked with guiding the migration of the ICONS Project from a proprietary backend (Oracle RDBMS and Oracle REST Data Services) to an open-source cloud solution (AWS, PostgreSQL, Python).',
+    skills: [
+      { id: 1, name: "Python", image: <SiPython /> },
+      { id: 2, name: "AWS", image: <FaAws /> },
+      { id: 5, name: "CloudFormation", image: <RiFileCloudFill /> },
+      { id: 11, name: "PostgreSQL", image: <SiPostgresql/>},
+      { id: 21, name: "Oracle", image: <SiOracle /> },
+    ],
+  },
+  {
+    id: 3,
     type: "work",
     company: "RIT Collegiate Science & Technology Entry Program (CSTEP)",
     date: 'January 2024 – Present',
@@ -25,7 +60,7 @@ const experienceData = [
     ],
   },
   {
-    id: 2,
+    id: 4,
     type: "work",
     company: "Rochester Institute of Technology",
     date: 'January 2024 – Present',
@@ -40,7 +75,7 @@ const experienceData = [
     ],
   },
   {
-    id: 3,
+    id: 5,
     type: "work",
     company: "National Society of Black Engineers (NSBE)",
     date: 'August 2023 – Present',
@@ -54,7 +89,7 @@ const experienceData = [
     ],
   },
   {
-    id: 4,
+    id: 6,
     type: "work",
     company: "RIT Laboratory of Software Design & Productivity",
     date: 'March 2023 – September 2023',
@@ -70,7 +105,7 @@ const experienceData = [
     ],
   },
   {
-    id: 5,
+    id: 7,
     type: "work",
     company: "National Society of Black Engineers (NSBE)",
     date: 'August 2021 – May 2023',
@@ -84,7 +119,7 @@ const experienceData = [
     ],
   },
   {
-    id: 6,
+    id: 8,
     type: "work",
     company: "TEOCO",
     date: 'August 2022 – January 2023',
@@ -100,7 +135,7 @@ const experienceData = [
     ],
   },
   {
-    id: 7,
+    id: 9,
     type: "work",
     company: "The Applied Research Laboratory at Penn State University ",
     date: 'June 2022 - August 2022',
@@ -122,7 +157,7 @@ const experienceData = [
     ],
   },
   {
-    id: 5,
+    id: 10,
     type: "education",
     institution: "Rochester Institute of Technology (RIT)",
     icon: <FaGraduationCap />,
